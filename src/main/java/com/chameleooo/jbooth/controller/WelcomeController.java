@@ -12,15 +12,6 @@ public class WelcomeController {
 
     @RequestMapping(value = "")
     public String index(Map<String, Object> model) {
-
-        try (Camera camera = new Camera()) {
-            camera.initialize();
-            camera.captureImage().save("hey.jpg");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        //Fill the model with data
-        model.put("key", "value");
         //Return a template name
         return "welcome";
     }
