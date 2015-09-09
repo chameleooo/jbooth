@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: lightslategray;
+    color: lightpink;
+    margin:0;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+.tlt {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    font-size: 5em;
+}
