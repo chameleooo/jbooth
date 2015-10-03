@@ -28,5 +28,32 @@ body {
     border: 6px white solid;
     margin: auto;
     display: block;
-    margin-top: 25px;
+}
+
+.picture-container {
+    padding-top: 25px;
+}
+
+.buttons-container div {
+    width: 250px;
+    float: left;
+    height: 250px;
+    text-align: center;
+}
+
+.buttons-container div:hover {
+    opacity : 0.8;
+}
+
+.buttons-container {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    background-color: gray;
+    opacity: 0.5;
+    color: white;
+    font-size: 15em;
+    border-radius: 10px;
+    top: 33%;
+    left: 33%;
 }

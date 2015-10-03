@@ -47,9 +47,8 @@ public class MainController {
     }
 
     @RequestMapping(value = "print/{filename:.+}")
-    public String print(@PathVariable("filename") String filename, Map<String, Object> model) throws IOException {
+    public @ResponseBody void print(@PathVariable("filename") String filename, Map<String, Object> model) throws IOException {
         printService.print(filename);
-        return "";
     }
 
 
