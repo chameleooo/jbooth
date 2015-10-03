@@ -2,7 +2,6 @@
     <ul class="texts">
         <li data-in-effect="fadeInLeftBig" data-out-effect="fadeOut">C'est parti !</li>
         <li data-in-effect="fadeInLeftBig" data-out-effect="fadeOut">Attention !</li>
-        <li data-in-effect="fadeInLeftBig" data-out-effect="fadeOut">Prêt ?</li>
         <li data-in-effect="fadeInLeftBig" data-out-effect="fadeOut">Souriez !</li>
     </ul>
 </div>
@@ -10,6 +9,13 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.tlt').textillate();
+        $('.tlt').textillate({
+            callback: function () {
+                $.ajax("/take-picture")
+                        .success(function (data) {
+                            $("#container").load("/show-picture/" + data.filename);
+                        });
+            }
+        });
     })
 </script>

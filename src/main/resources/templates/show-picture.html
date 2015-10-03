@@ -1,0 +1,11 @@
+<img id="picture" src="/get-picture/{{filename}}"/>
+
+<script type="text/javascript">
+    $(
+            $("#print").on("click", function () {
+                $.ajax("/print/{{filename}}").success(function () {
+                    window.location("/");
+                })
+            })
+    )
+</script>
